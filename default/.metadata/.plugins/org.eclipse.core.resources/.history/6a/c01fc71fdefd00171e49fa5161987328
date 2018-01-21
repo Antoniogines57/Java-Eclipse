@@ -1,0 +1,94 @@
+package p5;
+import java.text.DecimalFormat;
+public class Vector implements IForma {
+	private Punto origen; private Punto extremo;
+	
+	public Vector() {origen=new Punto(0,0); extremo=new Punto(1,0);}
+	public Vector(Punto punt0, Punto punt1){
+		origen=punt0; extremo=punt1;
+	}
+	public Vector(Punto punt0, double modulo, double grados) {
+		double gradRad=Math.toRadians(grados);
+		double subCord0=modulo*Math.sin(gradRad);	
+		double subCord1=modulo*Math.cos(gradRad);
+		extremo=new Punto(subCord0+punt0.getX(), subCord1+punt0.getY());
+	}
+	public double getOrientacion() {
+		double yFinal=extremo.getY()-origen.getY();
+		double xFinal=extremo.getX()-origen.getX();
+		double modulo=Math.sqrt(xFinal*xFinal+yFinal*yFinal);
+		return Math.asin(yFinal/modulo);
+	}
+	public Punto getFirstPoint() {
+		return origen;
+	}
+	public Punto getFinalPoint() {
+		return extremo;
+	}
+	public double getModuleAux() {
+		return Math.sqrt(Math.pow(extremo.getX()-origen.getX(),2)+Math.pow(extremo.getY()-origen.getY(),2));
+	}
+	public double getModule() {
+		return origen.distancia(extremo);
+	}
+	
+	
+	public double getXAxis() {
+		return extremo.getX()-origen.getX();
+	}
+	public double getYAxis() {
+		return extremo.getY()-origen.getY();
+	}
+	public IForma girarAux(double gradosCent, Punto pAux) {
+		Punto origen1=origen.trasladar(-pAux.getX(),-pAux.getY());
+		Punto fina= extremo.trasladar(-pAux.getX(),-pAux.getY());
+		Punto finalOrigen=origen1.girar(gradosCent);
+		Punto finalExtremo=fina.girar(gradosCent);
+		return new Vector (finalOrigen.trasladar(pAux.getX(),pAux.getY()),
+				finalExtremo.trasladar(pAux.getX(), pAux.getY()));
+	}
+	public IForma girar(double gradCen, Punto auxx) {
+		return new Vector(origen.girar(gradCen, auxx.getX(), auxx.getY()),
+				extremo.girar(gradCen, auxx.getX(), auxx.getY()));
+	}
+	
+	
+	public IForma girar(double gradosCent) {
+		Punto fina= extremo.trasladar(-origen.getX(),-origen.getY());
+		Punto finalExtremo=fina.girar(gradosCent);
+		return new Vector (origen,finalExtremo.trasladar(origen.getX(), origen.getY()));
+	}
+	public IForma trasladar(double deltaX, double deltaY) {
+		return new Vector(origen.trasladar(deltaX,deltaY), extremo.trasladar(deltaX, deltaY));
+	}
+	public String toString(){
+		DecimalFormat forma=new DecimalFormat();
+		forma.setMaximumFractionDigits(2);
+		return "[ " + origen.toString() + " , "+ forma.format(getModule())+" , "
+			+forma.format(getOrientacion())+" ]";
+	}
+	/*
+	 * double X0=X*Math.cos(gradosR)+Y*Math.sin(gradosR);forma.format(getOrientation())
+	 * double Y0=X*Math.sin(gradosR)+Y*Math.cos(gradosR);	
+	 */
+	@Override
+	public double getX() {
+		// TODO Auto-generated method stub
+		return origen.getX();
+	}
+	@Override
+	public double getY() {
+		// TODO Auto-generated method stub
+		return origen.getY();
+	}
+	@Override
+	public IForma girar(double grados, double x, double y) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public double distancia(IForma forma) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

@@ -1,0 +1,8 @@
+package junio_2016;
+
+public class Main {
+	public static void main(String[]args) {
+		GestionCitas hospital1=new GestionCitas();
+		
+	}
+}

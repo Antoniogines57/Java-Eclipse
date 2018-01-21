@@ -1,0 +1,13 @@
+package cortana;
+import java.util.ArrayList;
+public class Hotel {
+	private Habitacion[] habitaciones;
+	private String nombre;
+	private String owner;
+	private Trabajador[] trabajadores;
+	private String direccion;
+	
+	public Hotel(String name, int numberOfRooms) {
+		
+	}
+}

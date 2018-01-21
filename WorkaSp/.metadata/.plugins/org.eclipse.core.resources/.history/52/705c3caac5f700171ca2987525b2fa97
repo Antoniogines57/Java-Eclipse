@@ -1,0 +1,10 @@
+package enero_2015;
+import utilidades.Teclado;
+public class Main {
+	public static void main(String[]args) {
+		System.out.println("Introduzca el punto A: ");
+		Punto A=new Punto(Teclado.readDouble(),Teclado.readDouble());
+		System.out.println("Introduzca el punto B: ");
+		Punto B=new Punto(Teclado.readDouble(),Teclado.readDouble());
+	}
+}

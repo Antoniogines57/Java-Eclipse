@@ -1,0 +1,13 @@
+package febrero_2014;
+
+public class Complejo {
+	private double x1,y1;
+	public Complejo(double modulo, float argumento) {
+		
+	}
+	
+	public Complejo(double real, double imag) {
+		
+	}
+	
+}

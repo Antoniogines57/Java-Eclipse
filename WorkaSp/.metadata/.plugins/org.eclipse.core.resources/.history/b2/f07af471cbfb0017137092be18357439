@@ -1,0 +1,8 @@
+package colegio;
+
+public interface Asignatura {
+	public String getTeacher();
+	public Alumnos[] getListOfAlumns();
+	public int getGroup();
+	
+}

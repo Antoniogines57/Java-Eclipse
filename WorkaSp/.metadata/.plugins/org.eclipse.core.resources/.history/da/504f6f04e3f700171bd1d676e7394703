@@ -1,0 +1,11 @@
+package febrero_2013;
+
+public class Circunferencia implements IFormaCerrada{
+	public double getPerimetro() {
+		return 0;
+	}
+	public double getArea() {
+		 return 0;
+	}
+
+}

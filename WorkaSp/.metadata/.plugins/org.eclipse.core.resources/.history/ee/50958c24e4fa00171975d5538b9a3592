@@ -1,0 +1,20 @@
+package junio_2012;
+
+public class Rectangulo implements Poligono{
+	private double base, altura;
+	
+	@Override
+	public double getArea() {
+		// TODO Auto-generated method stub
+		return base*altura;
+	}
+
+	@Override
+	public double getPerimetro() {
+		// TODO Auto-generated method stub
+		return 2*altura+2base;
+	}
+	public double getDiagonal() {
+		
+	}
+}

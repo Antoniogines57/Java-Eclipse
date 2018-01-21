@@ -1,0 +1,19 @@
+package seccion28_class91;
+import utilidades.Teclado;
+public class ControlVentas extends Ventas{
+	public static void main(String []args) {
+		System.out.println("1. Añadir producto: ");
+		System.out.println("1. Quitar producto producto: ");
+		System.out.println("Que operacion desea realizar: ");
+		int res=Teclado.readInt();
+		switch (res) {
+			case 1: {
+				lista[count]=new Producto();
+				System.out.println("introduzca un nombre: ");
+				lista[count].setNombre(Teclado.readString());
+				System.out.println("introduzca el precio: ");
+				lista[count++].setPrecio(Teclado.readDouble());
+			}
+		}
+	}
+}

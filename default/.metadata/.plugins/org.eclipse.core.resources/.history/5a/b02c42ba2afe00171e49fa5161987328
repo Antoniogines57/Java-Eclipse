@@ -1,0 +1,14 @@
+
+public class Diciembre17 {
+	public static int[] eliminaRepetidos(int[] ar) {
+		int[]b=new int[ar.length];
+		for(int i=0;i<ar.length;i++) {
+			b[i]=ar[i];
+		}
+		for(int m=0;m<b.length-1;m++) {
+			for(int j=0;j<b[m].length-1;j++) {
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+package septiembre_2014;
+
+public interface Animal {
+
+}

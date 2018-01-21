@@ -1,0 +1,19 @@
+package junio_2012;
+
+public class Triangulo implements Poligono {
+
+	@Override
+	public double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getPerimetro() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	double getBase() {
+		
+	}
+}

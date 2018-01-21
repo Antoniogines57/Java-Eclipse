@@ -1,0 +1,34 @@
+package cortana;
+import utilidades.Teclado;
+public class Habitacion {
+	private int ID;
+	private Cliente cliente; private int actualUID;
+	private Fecha entrada,salida;
+	private boolean swift, premium;
+	private int numeroCamas;
+	int n=2;
+	
+	public Habitacion(int ID) {
+		this.ID=ID;
+	}
+	public void reserva(int ID, Cliente user, Fecha deEntrada, Fecha deSalida) {
+		if(user==null||entrada.fechaAnteriorA(salida)!=true) System.out.println("Se ha producido un error"
+				+ ",\n compruebe los argumentos de entrada.");
+		else {
+			this.ID=ID; entrada=deEntrada.newFecha(deEntrada);salida=deSalida.newFecha(deSalida);
+		}
+	}
+	public void cancerlarReserva(int n) {
+		if(cliente.login()==true){
+			ID=00000000;
+			cliente=null;
+			entrada=null; salida=null;
+		}
+		else {
+			System.out.println("Contraseña erronea, desea reintentarlo?");
+			if(Teclado.readString().equals("si")==true) cancelarReserva(n-1);
+		}
+	}
+	
+	
+}

@@ -1,0 +1,11 @@
+package seccion28_class91;
+
+public class Ventas {
+	protected static Producto[] lista=new Producto[100];
+	int count=0;
+	public static void main(String[]args) {
+		
+		
+		
+	}
+}

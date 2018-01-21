@@ -1,0 +1,10 @@
+package septiembre_2017;
+
+public class Mainn {
+	public static void main(String[]args) {
+		ArchivoTarjetas g_minuscula_oogle=new ArchivoTarjetas(300);
+		g_minuscula_oogle.introducirTarjetas(new TarjetaDeEmpresa("Carlos Gomez", "carlitos@gmail.com",
+				"Encargado de servicios externos"));
+		
+	}
+}

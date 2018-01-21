@@ -1,0 +1,9 @@
+package cortana;
+import utilidades.Teclado;
+import java.util.ArrayList;
+public class GestionHotel {
+	protected ArrayList<Hotel> hotelesMurcia=new ArrayList<Hotel>();
+	System.out.println(" ")
+	
+	switch(Teclado.readInt()) 
+}

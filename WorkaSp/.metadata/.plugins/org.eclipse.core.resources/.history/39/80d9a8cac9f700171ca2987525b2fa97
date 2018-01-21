@@ -1,0 +1,23 @@
+package septiembre_2014;
+
+public class Ave implements Animal {
+
+	@Override
+	public void nacer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void comer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void morir() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

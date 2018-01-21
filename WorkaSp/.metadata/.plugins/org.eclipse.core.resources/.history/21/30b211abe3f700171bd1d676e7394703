@@ -1,0 +1,9 @@
+package febrero_2013;
+
+public class GestorFormas {
+	private static IFormaCerrada[] arrayFormas;
+	
+	public TrianguloEquilatero[] getTriangulos() {
+		
+	}
+}

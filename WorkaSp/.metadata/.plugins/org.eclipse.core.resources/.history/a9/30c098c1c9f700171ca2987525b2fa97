@@ -1,0 +1,25 @@
+package septiembre_2014;
+
+public class Mamifero implements Animal {
+
+	public void amamantar() {
+		
+	}
+	public void nacer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void comer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void morir() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

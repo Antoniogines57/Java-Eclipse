@@ -1,0 +1,52 @@
+package cortana;
+
+public class DNI {
+	private String name;
+	private String apellidos;
+	private int numeroDNI;
+	private Fecha deNacimiento;
+	private Fecha deVencimiento;
+	
+	public DNI(String name,String apellidos,int num, Fecha nac,Fecha venc) {
+		this.name=name;this.apellidos=apellidos; numeroDNI=num; deNacimiento=nac; deVencimiento=venc;
+	}
+	public String getNombre() {
+		return new String(name);
+	}
+	public String getApellidos() {
+		return new String(apellidos);
+	}
+	public Fecha getNacimiento() {
+		return deNacimiento.newFecha();
+	}
+	public Fecha getVencimiento() {
+		return deVencimiento.newFecha();
+	}
+	public int getNumb() {
+		return numeroDNI;
+	}
+	public void setName(String nombre) {
+		if(nombre!=null&&nombre.equals(" ")==false) {
+			name=new String(nombre);
+		}
+		else {
+			System.out.println("El nombre a introducir no es valido.");
+		}
+	}
+	public void setApellidos(String app) {
+		if(app!=null&&app.equals(" ")==false) {
+			name=new String(app);
+		}
+		else {
+			System.out.println("Los apellidos introducidos no son validos.");
+		}
+	}
+	public void setFechaDeVencimiento(Fecha inn) {
+		if(inn!=null&&inn.fechaAnteriorA(deVencimiento)==false) {
+			deVencimiento=inn.newFecha();
+		}
+		else {
+			System.out.println("La fecha indicada es anterior a la establecida.")
+		}
+	}
+}

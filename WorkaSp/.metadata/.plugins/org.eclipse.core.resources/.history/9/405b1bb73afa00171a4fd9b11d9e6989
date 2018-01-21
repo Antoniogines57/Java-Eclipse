@@ -1,0 +1,5 @@
+package cortana;
+
+public class GestionHotel {
+	private ArrayList<Hotel> hotelesMurcia=new ArrayList<Hotel>();
+}

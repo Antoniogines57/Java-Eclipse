@@ -1,0 +1,14 @@
+public class Test{
+	public static void main(String[]args) {
+	}
+	public static double[] medias(double [][]sum) {
+		double[] fin=new double[sum.length];
+		for(int i=0; i<sum.length;i++) {
+			double count=0;
+			for(int j=0;j<sum[i].length;j++) {
+				count+=sum[i][j];
+			}
+			fin[i]=count/sum[i].length;
+		}
+	}
+}

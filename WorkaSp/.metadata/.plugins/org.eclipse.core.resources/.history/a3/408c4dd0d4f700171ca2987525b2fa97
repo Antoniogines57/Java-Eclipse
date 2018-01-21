@@ -1,0 +1,16 @@
+package septiembre_2013;
+
+public class GestoTarjetas {
+	private static TarjetaDeVisita[] arrayTarjetas;
+	
+	public static TarjetaEmpresa[] getAllEmpresa() {
+		int c;
+		for(TarjetaDeVisita kol:arrayTarjetas) {
+			if(kol instanceof TarjetaEmpresa) {c++;
+			}
+		}
+	}
+	public static void printTarjetas() {
+		
+	}
+}

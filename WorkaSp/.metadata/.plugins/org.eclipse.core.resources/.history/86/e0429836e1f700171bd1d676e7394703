@@ -1,0 +1,8 @@
+package febrero_2013;
+
+public class TrianguloEquilatero {
+	 
+	public TrianguloEquilatero(double lado) {
+		
+	}
+}

@@ -1,0 +1,6 @@
+package cortana;
+import java.util.ArrayList;
+public class GestionHotel {
+	protected ArrayList<Hotel> hotelesMurcia=new ArrayList<Hotel>();
+	
+}

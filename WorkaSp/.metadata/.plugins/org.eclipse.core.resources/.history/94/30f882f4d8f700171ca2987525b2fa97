@@ -1,0 +1,37 @@
+package junio_2013;
+
+public class Libro {
+	private float precio;
+	private CodigoBarras barCode;
+	private String autor;
+	private String titulo;
+	private int[] ISBN=new int[10];
+	
+	public Libro() {
+		precio=0;  barCode="000"; 
+	}
+	public Libro(float precio, CodigoBarras codigo, String autor, String titulo) {
+		this.precio=precio; barCode=codigo; this.autor=autor;
+		this.titulo=titulo;
+	}
+	public void setISBN(int[] arr) {
+		boolean p=true;
+		for(int l:arr) {
+			if(l>9||l<0) {
+				p=false;
+				break;
+			}
+		}
+		if(arr.length!=10||p==false) {
+			System.out.println("Codigo ISBN incorrecto.");
+		}
+		else {
+			for(int i=0;i<10;i++) {
+				ISBN[i]=arr[i];
+			}
+		}
+	}
+	
+	
+	
+}

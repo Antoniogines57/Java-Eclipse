@@ -1,0 +1,19 @@
+package septiembre_2012;
+
+public class Administrativi implements Funcionario {
+	private int nivel;
+	private String categoria;
+	private boolean jefe;
+	@Override
+	public int getNivel() {
+		// TODO Auto-generated method stub
+		return nivel;
+	}
+
+	@Override
+	public String getCategoria() {
+		// TODO Auto-generated method stub
+		return categoria;
+	}
+
+}

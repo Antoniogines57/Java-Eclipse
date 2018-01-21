@@ -1,0 +1,68 @@
+package cortana;
+import java.util.ArrayList;
+import utilidades.Teclado;
+public class Hotel {
+	private Habitacion[] habitaciones;
+	private String nombre;
+	private String owner;
+	private ArrayList<Trabajador> trabajadores=new ArrayList<Trabajador>();
+	private String direccion;
+	
+	public Hotel(String name, int numberOfRooms) {
+		if(name!=null&&name.equals(" ")==false) {
+			if(numberOfRooms>0) {
+				nombre=new String(name);
+				habitaciones=new Habitacion[numberOfRooms];
+				for(Habitacion kal:habitaciones) {
+					kal=null;
+				}
+			}
+			else {
+				System.out.println("Numero de habitaciones introducido erroneo.");
+			}
+		}
+		else {
+			System.out.println("El nombre introducido no es valido.");
+		}
+	}
+	public void setOwner(String dato) {
+		if(dato!=null&&dato.equals(" ")==false) {
+			owner=new String(dato);
+		}
+		else {
+			System.out.println("Nombre introducido no es valido.");
+		}
+	}
+	public void setDireccion(String calle) {
+		if(calle!=null&&calle.equals(" ")==false) {
+			direccion=new String(calle);
+		}
+		else {
+			System.out.println("Direccion introducida erronea.");
+		}
+	}
+	public void reservarHabitacion() {
+		System.out.println("Disponemos de las siguientes habitaciones: ");
+		System.out.println(" ");
+		for(int i=0;i<habitaciones.length;i++) {
+			if(habitaciones[i]==null) {
+				System.out.println("Habitacion "+(i+1)+" disponible.");
+			}
+		}
+		System.out.println(" "); System.out.println(" ");
+		System.out.println("Introduzca el numero de la habitacion que desea reservar: ");
+		int el=Teclado.readInt()-1;
+		if(habitaciones[el]!=null&&el>=habitaciones.length) {
+			System.out.println("Numero de habitacion no disponible");
+		}
+		else {
+			System.out.println("Introduzca la fecha de entrada: ");
+			Fecha deEntrada=new Fecha(Teclado.readInt(),Teclado.readInt(),Teclado.readInt());
+			System.out.println("Introduzca la fecha de entrada: ");
+			Fecha deSalida=new Fecha(Teclado.readInt(),Teclado.readInt(),Teclado.readInt());
+			
+			habitaciones[el].reserva(el, user, deEntrada, deSalida);
+		}
+	}
+	
+}

@@ -1,0 +1,28 @@
+package septiembre_2014;
+
+public class Main {
+	public static void main(String[]args) {
+		Vector v1=new Vector(2,4,5);
+		Vector v2=new Vector(4,6,1);
+		System.out.println(v1.modulo());
+		System.out.println(v2.modulo());
+		System.out.println("");
+		System.out.println(v1.productoEscalar(v2));
+		
+		//-------------------------------------------------------------------
+		
+		Animal[] granja=new Animal[10];
+		for(Animal elf:granja) {
+			elf.nacer();
+		}
+		for(Animal perr:granja) {
+			if(perr instanceof Ave) {
+				((Ave) perr).empollar();
+			}
+			else if(perr instance of Mamifero) {
+				((Mamifero) perr).amamantar();
+			}
+		}
+	}
+	
+}

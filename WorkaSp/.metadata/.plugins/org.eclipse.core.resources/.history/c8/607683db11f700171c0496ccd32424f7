@@ -1,0 +1,11 @@
+package septiembre_2016;
+
+public class GestionHotel {
+	Habitacion[] hotel1=new Habitacion[1000];
+	
+	public GestionHotel(int numeroHabitaciones) {
+		for(Habitacion clero:hotel1) {
+			clero=null;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+package septiembre_2016;
+
+public class Main {
+	GestionHotel hotelPrincipal=new GestionHotel(1000);
+	hotelPrincipal.reservarHabitacion();
+}

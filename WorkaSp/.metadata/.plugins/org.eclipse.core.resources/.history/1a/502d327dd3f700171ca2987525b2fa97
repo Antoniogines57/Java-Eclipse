@@ -1,0 +1,18 @@
+package septiembre_2013;
+
+public class TarjetaEmpresa implements TarjetaDeVisita {
+	private String cargo;
+	private TarjetaPersonal tarjeta;
+	
+	public TarjetaEmpresa(String nombre, String email, String puesto) {
+		cargo=new String(puesto);
+		tarjeta=new TarjetaPersonal(new String(nombre), new String(email));
+	}
+	public String getNombre() {
+		return null;
+	}
+	public String getEmail() {
+		return null;
+	}
+
+}

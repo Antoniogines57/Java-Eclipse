@@ -1,0 +1,10 @@
+package septiembre_2014;
+
+public interface Animal {
+	public void nacer() {
+		// TODO Auto-generated method stub
+		
+	}
+	public void comer();
+	public void morir();
+}

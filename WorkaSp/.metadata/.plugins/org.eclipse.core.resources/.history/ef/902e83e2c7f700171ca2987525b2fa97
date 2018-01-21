@@ -1,0 +1,8 @@
+package septiembre_2014;
+
+public class Vector {
+	private double[] pExtremo=new double[3];
+	public Vector(double x, double y, double z) {
+		pExtremo[0]=x;pExtremo[1]=y;pExtremo[2]=z;
+	}
+}

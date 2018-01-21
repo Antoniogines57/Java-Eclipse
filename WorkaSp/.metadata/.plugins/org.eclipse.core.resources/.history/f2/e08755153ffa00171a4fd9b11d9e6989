@@ -1,0 +1,5 @@
+package cortana;
+import java.util.ArrayList;
+public class GestionHotel {
+	private ArrayList<Hotel> hotelesMurcia=new ArrayList<Hotel>();
+}

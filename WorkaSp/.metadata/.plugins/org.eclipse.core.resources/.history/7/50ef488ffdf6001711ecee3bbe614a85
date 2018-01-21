@@ -1,0 +1,17 @@
+package parcial_diciembre_2017;
+
+public class TarjetaDeEmpresa implements ITarjetaVisita {
+
+	@Override
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getEMail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

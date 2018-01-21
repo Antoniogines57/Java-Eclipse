@@ -1,0 +1,11 @@
+package junio_2012;
+
+public class Complejos {
+	private double raw, tita;
+	public Complejos(double roe, double teta) {
+		raw=roe; tita=teta;
+	}
+	public Complejos(double real, double imaginaria) {
+		
+	}
+}

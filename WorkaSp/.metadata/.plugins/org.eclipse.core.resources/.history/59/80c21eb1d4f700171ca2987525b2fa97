@@ -1,0 +1,12 @@
+package septiembre_2013;
+
+public class GestoTarjetas {
+	private static TarjetaDeVisita[] arrayTarjetas;
+	
+	public static TarjetaEmpresa[] getAllEmpresa() {
+		
+	}
+	public static void printTarjetas() {
+		
+	}
+}

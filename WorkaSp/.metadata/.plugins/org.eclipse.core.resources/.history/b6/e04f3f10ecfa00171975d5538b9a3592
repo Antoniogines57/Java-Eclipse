@@ -1,0 +1,5 @@
+package febrero_2011;
+
+public class Blanco {
+	private Localizacion location;
+}

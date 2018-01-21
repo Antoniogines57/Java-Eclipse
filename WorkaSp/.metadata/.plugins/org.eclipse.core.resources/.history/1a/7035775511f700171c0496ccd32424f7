@@ -1,0 +1,11 @@
+package septiembre_2016;
+
+public class Habitacion {
+	private String name; private int DNI;
+	private Fecha entrada, salida;
+	private char fumador;
+	
+	public Habitacion(String nombre, int dni, Fecha fEntrada, Fecha fSalida) {
+		name=nombre; DNI=dni; entrada=fEntrada; salida=fSalida;
+	}
+}

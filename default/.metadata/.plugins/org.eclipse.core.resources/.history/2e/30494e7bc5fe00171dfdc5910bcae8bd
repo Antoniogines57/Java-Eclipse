@@ -1,0 +1,39 @@
+package seccion28_class91;
+
+public class Orden {
+	private final int IDorden;
+	private final Producto[] aComprar;
+	private static int conntCompras;
+	private int contProd;
+	private static final int maxProd=10;
+	
+	public Orden() {
+		IDorden=conntCompras; conntCompras++;
+		aComprar=new Producto[maxProd];
+	}
+	public void addProd(Producto aC) {
+		if(contProd<maxProd) {
+			aComprar[contProd++]=aC;
+		}
+		else {
+			System.out.println("Máximo de productos alcanzado.");
+		}
+	}
+	public double calcularTotal() {
+		double total=0;
+		for(Producto k:aComprar) {
+			total+=k.getPrecio();
+		}
+		return total;
+	}
+	public void mostrarOrden() {
+		System.out.println("Compra nº: "+IDorden+
+				"\nPrecio total: "+calcularTotal());
+		for(Producto k:aComprar) {
+			System.out.println(k+"\n");
+		}
+	}
+	
+	
+	
+}

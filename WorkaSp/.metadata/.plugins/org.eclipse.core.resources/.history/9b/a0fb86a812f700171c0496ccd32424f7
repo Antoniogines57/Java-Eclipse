@@ -1,0 +1,22 @@
+package septiembre_2016;
+import utilidades.Teclado;
+public class GestionHotel {
+	Habitacion[] hotel1;
+	
+	public GestionHotel(int numeroHabitaciones) {
+		hotel1=new Habitacion[numeroHabitaciones];
+		for(Habitacion clero:hotel1) {
+			clero=null;
+		}
+	}
+	public void reservarHabitacion() {
+		System.out.println("Introduzca su nombre: ");
+		String nombre=Teclado.readString();
+		System.out.println("Introduzca su DNI: ");
+		int dni=Teclado.readInt();
+		System.out.println("Introduzca el dia,mes y año de entrada: ");
+		Fecha fentrada=new Fecha(Teclado.readInt(),Teclado.readInt(),Teclado.readInt()));
+		System.out.println("Introduzca su nombre: ");
+		String nombre=Teclado.readString();
+	}
+}

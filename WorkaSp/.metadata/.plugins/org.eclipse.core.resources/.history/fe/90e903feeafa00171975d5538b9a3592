@@ -1,0 +1,40 @@
+package febrero_2011;
+
+public class Localizacion {
+	private final int X, Y;
+	private final double T;
+	
+	public Localizacion() {
+		X=0;Y=0;T=0;
+	}
+	public Localizacion(int X, int Y, double T) {
+		if(T<0) {
+			this.X=X;this.Y=Y;this.T=0;
+		}
+		else {
+			this.X=X;this.Y=Y;this.T=T;
+		}
+	}
+	public void setX(int x) {
+		X=x;
+	}
+	public void setY(int y) {
+		Y=y;
+	}
+	public void setT(double t) {
+		T=t;
+	}
+	public int getX() {
+		return X;
+	}
+	public int getY() {
+		return Y;
+	}
+	public double getT() {
+		return T;
+	}
+	
+	public String toString() {
+		return "( "+X+" , "+Y+" )"+" en el instante: "+T+"s.";
+	}
+}

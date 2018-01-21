@@ -1,0 +1,9 @@
+package junio_2013;
+
+public class Libro {
+	private float precio;
+	private CodigoBarras barCode;
+	
+	
+	
+}

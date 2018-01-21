@@ -1,0 +1,16 @@
+package junio_2012;
+
+public class Main {
+	private static Poligono[] polis;
+	public static void main(String[]args) {
+		polis=new Poligono[10];
+		for(int i=0;i<polis.length;i++) {
+			if(Math.random()<0.5) {
+				polis[i]=new Triangulo();
+			}
+			else {
+				polis[i]=new Triangulo();
+			}
+		}
+	}
+}

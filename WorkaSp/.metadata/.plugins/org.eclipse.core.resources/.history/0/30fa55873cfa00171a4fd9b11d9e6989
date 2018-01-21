@@ -1,0 +1,5 @@
+package cortana;
+import utilidades.Teclado;
+public class GestionHotelAdminV extends GestionHotel{
+	
+}

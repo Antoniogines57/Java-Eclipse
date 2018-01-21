@@ -1,0 +1,10 @@
+
+public class Diciembre17 {
+	public static void main(String[]args) {
+		String vel="Carlos";
+		char[] al=new char[vel.length()];
+		for (char l:vel.toCharArray()) {
+			System.out.println(l);
+		}
+	}
+}

@@ -1,0 +1,6 @@
+package febrero_2011;
+
+public class Localizacion {
+	private int X, Y, T;
+	
+}

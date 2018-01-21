@@ -1,0 +1,10 @@
+package junio_2016;
+
+public class GestionCitas {
+	private Cita[][][] citas=new Cita[12][30][10];
+	
+	public GestionCitas() {}
+	public void reservarCita(Cita newCita) {
+		
+	}
+}

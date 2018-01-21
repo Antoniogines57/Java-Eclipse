@@ -1,0 +1,7 @@
+package junio_2016;
+
+public class Cita {
+	private String name;
+	private String secureBrand;
+	private FechaCita fecha;
+}

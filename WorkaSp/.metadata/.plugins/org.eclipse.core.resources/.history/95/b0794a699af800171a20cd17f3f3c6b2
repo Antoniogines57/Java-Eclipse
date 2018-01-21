@@ -1,0 +1,64 @@
+package cortana;
+import java.time.*;
+import java.util.Date;
+
+import utilidades.Teclado;
+public class Habitacion {
+	private int ID;
+	private Cliente cliente; private int actualUID;
+	private Fecha entrada,salida;
+	private boolean swift, premium;
+	private int numeroCamas;
+	private int n=4;
+	
+	public Habitacion(int ID) {
+		this.ID=ID;
+	}
+	public void reserva(int ID, Cliente user, Fecha deEntrada, Fecha deSalida) {
+		if(user==null||entrada.fechaAnteriorA(salida)!=true) System.out.println("Se ha producido un error"
+				+ ",\n compruebe los argumentos de entrada.");
+		else {
+			this.ID=ID; entrada=deEntrada.newFecha();salida=deSalida.newFecha();
+		}
+	}
+	private void setEmpty() {
+		n=4;
+		cliente=null;
+		entrada=null; salida=null;
+	}
+	public void cancerlarReserva() {
+		n--;
+		if(n==0) {System.out.println("Numero maximon de intentos alcanzado.");}
+		else {
+			if(cliente.login()==true){
+				setEmpty();
+			}
+			else {
+				System.out.println("Contraseña erronea, desea reintentarlo?");
+				if(Teclado.readString().equals("si")==true) {
+					cancerlarReserva();
+				}
+			}
+		}
+	}
+	public int getCamas() {return numeroCamas;}
+	public boolean lookForExtras() {
+		if(swift==true||premium==true) return true;
+		else return false;
+	}
+	public Fecha getFEntrada() {return entrada.newFecha();}
+	public Fecha getFSalida(){return salida.newFecha();}
+	public int getID() {return ID;}
+	public void setCamas(int n) {
+		numeroCamas=n;
+	}
+	public void setFSalida(Fecha fs) {
+		salida=fs.newFecha();
+	}
+	public void resetDeleteAttempts() {n=4;}
+	public void limpiar() {
+	}
+	public void checkInstance() {
+		if(salida.fechaAnteriorA(salida.getActualDay())==false)
+	}
+}

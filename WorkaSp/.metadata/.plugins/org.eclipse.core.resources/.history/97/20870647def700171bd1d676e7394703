@@ -1,0 +1,11 @@
+package junio_2013;
+
+public class GestionArticulos {
+	private static IArticulo[] arrayArticulos;
+	
+	public Libro[] getLibros() {
+		for(IArticulo A: arrayArticulos{
+			if
+		}
+	}
+}

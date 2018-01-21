@@ -1,0 +1,27 @@
+package cortana;
+import utilidades.Teclado;
+import java.util.ArrayList;
+public class GestionHotel {
+	private static ArrayList<Hotel> hotelesMurcia=new ArrayList<Hotel>();
+	public static void main(String[]args) {
+		System.out.println("1. Add hotel.");
+		System.out.println("2. Remove hotel.");
+		System.out.println("3. Add clients.");
+		System.out.println("");
+		int f=Teclado.readInt();
+		switch (f) {
+		case 1:
+			System.out.println("Introduzca el nombre del hotel y el numero de habitaciones: ");
+			hotelesMurcia.add(new Hotel(Teclado.readString(),Teclado.readInt()));
+			break;
+		case 2:
+			System.out.println("Introduzca el nombre del hotel: ");
+			String fer=Teclado.readString();
+			for(int i=0;i<hotelesMurcia.size();i++) {
+				
+			}
+			
+			
+		}
+	}
+}

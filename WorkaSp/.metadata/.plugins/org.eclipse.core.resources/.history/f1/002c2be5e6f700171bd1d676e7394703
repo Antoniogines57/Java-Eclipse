@@ -1,0 +1,5 @@
+package septiembre_2012;
+
+public interface Funcionario {
+
+}

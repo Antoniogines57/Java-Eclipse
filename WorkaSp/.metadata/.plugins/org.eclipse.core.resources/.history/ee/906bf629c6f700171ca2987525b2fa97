@@ -1,0 +1,6 @@
+package enero_2015;
+
+public class Vector {
+	private Punto origen, extremo;
+	
+}

@@ -1,0 +1,21 @@
+package junio_2013;
+
+public class GestionArticulos {
+	private static IArticulo[] arrayArticulos=new IArticulo[1000];
+	
+	public Libro[] getLibros() {
+		int c=0;
+		for(IArticulo A: arrayArticulos)
+			if(A instanceof Libro) {
+				c++;
+		}
+		Libro[] libros=new Libro[c];
+		c=0;
+		for(IArticulo B: arrayArticulos) {
+			if(B instanceof Libro) {
+				libros[c]=B;
+				c++;
+			}
+		}
+	}
+}

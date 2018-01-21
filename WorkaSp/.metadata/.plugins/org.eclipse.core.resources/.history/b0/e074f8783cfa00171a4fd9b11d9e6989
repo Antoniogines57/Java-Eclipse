@@ -1,0 +1,6 @@
+package cortana;
+
+public class GestionHotelAdminV extends GestionHotel{
+	
+	
+}

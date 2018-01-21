@@ -1,0 +1,12 @@
+package seccion_12;
+
+public class Caja {
+	private double ancho, profundo, alto;
+	
+	public Caja(double ancho, double profundo, double alto) {
+		this.ancho=ancho;this.profundo=profundo;this.alto=alto;
+	}
+	public Caja() {
+		ancho=0;profundo=0;alto=0;
+	}
+}

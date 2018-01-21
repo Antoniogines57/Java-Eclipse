@@ -1,0 +1,16 @@
+package junio_2016;
+
+class FechaCita{
+	private int dia; // Tendrá un valor entre 1..30
+	private int sesion; // Tendrá un valor entre 1..10
+	public FechaCita(int dia, int sesion){
+		this.dia=dia;
+		this.sesion=sesion;
+	}
+	public int getDia() {
+		return dia;
+	}
+	public int getSesion() {
+		return sesion;
+	}
+}

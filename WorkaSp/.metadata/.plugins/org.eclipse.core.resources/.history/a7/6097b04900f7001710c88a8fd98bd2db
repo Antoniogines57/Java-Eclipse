@@ -1,0 +1,19 @@
+package parcial_diciembre_2017;
+
+public class TarjetaDeEmpresa implements ITarjetaVisita{
+	private String job;
+	public TarjetaDeEmpresa(String nombre, String correo, String puesto) {
+		TarjetaPersonal personal=new TarjetaPersonal(nombre, correo);
+		job=puesto;
+	}
+	public String getNombre() {
+		return name;
+	}
+	public String getEMail() {
+		return email;
+	}
+	public String getJob() {
+		return job;
+	}
+
+}

@@ -1,0 +1,22 @@
+package febrero_2011;
+
+public class Localizacion {
+	private int X, Y, T;
+	
+	public Localizacion() {
+		X=0;Y=0;T=0;
+	}
+	public Localizacion(int X, int Y, int T) {
+		if(T<0) {
+			System.out.println("Tiempo no puede ser menor que cero.");
+		}
+		else {
+			if(T<this.T) {
+			this.X=X;this.Y=Y;this.T=0;
+			}
+			else {
+				this.X=X;this.Y=Y;this.T=T;
+			}
+		}
+	}
+}

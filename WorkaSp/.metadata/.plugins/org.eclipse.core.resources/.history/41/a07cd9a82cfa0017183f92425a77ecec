@@ -1,0 +1,37 @@
+package cortana;
+import java.util.ArrayList;
+public class Hotel {
+	private Habitacion[] habitaciones;
+	private String nombre;
+	private String owner;
+	private ArrayList<Trabajador> trabajadores=new ArrayList<Trabajador>();
+	private String direccion;
+	
+	public Hotel(String name, int numberOfRooms) {
+		if(name!=null&&name.equals(" ")==false) {
+			if(numberOfRooms>0) {
+				nombre=new String(name);
+				habitaciones=new Habitacion[numberOfRooms];
+				for(Habitacion kal:habitaciones) {
+					kal=null;
+				}
+			}
+			else {
+				System.out.println("Numero de habitaciones introducido erroneo.");
+			}
+		}
+		else {
+			System.out.println("El nombre introducido no es valido.");
+		}
+	}
+	public void setOwner(String dato) {
+		if(dato!=null&&dato.equals(" ")==false) {
+			owner=new String(dato);
+			
+		}
+		else {
+			
+		}
+	}
+	
+}

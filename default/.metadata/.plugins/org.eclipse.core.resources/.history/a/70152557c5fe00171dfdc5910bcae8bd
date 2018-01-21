@@ -1,0 +1,22 @@
+package seccion28_class91;
+
+public class Orden {
+	private final int IDorden;
+	private final Producto[] aComprar;
+	private static int conntCompras;
+	private int contProd;
+	private static final int maxProd=10;
+	
+	public Orden() {
+		IDorden=conntCompras; conntCompras++;
+		aComprar=new Producto[maxProd];
+	}
+	public void addProd(Producto aC) {
+		if(contProd<maxProd) {
+			aComprar[contProd++]=aC;
+		}
+	}
+	
+	
+	
+}

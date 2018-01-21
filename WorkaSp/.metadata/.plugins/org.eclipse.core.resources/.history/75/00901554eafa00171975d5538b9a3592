@@ -1,0 +1,36 @@
+package febrero_2011;
+
+public class Localizacion {
+	private int X, Y;
+	private double T;
+	
+	public Localizacion() {
+		X=0;Y=0;T=0;
+	}
+	public Localizacion(int X, int Y, double T) {
+		if(T<0) {
+			this.X=X;this.Y=Y;this.T=0;
+		}
+		else {
+			this.X=X;this.Y=Y;this.T=T;
+		}
+	}
+	public void setX() {
+		
+	}
+	public void setY() {
+		
+	}
+	public void setT() {
+		
+	}
+	public int getX() {
+		
+	}
+	public int getY() {
+		
+	}
+	public double getT() {
+		
+	}
+}

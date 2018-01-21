@@ -1,0 +1,7 @@
+package septiembre_2017;
+
+public class Mainn {
+	public static void main(String[]args) {
+		ArchivoTarjetas Google=new ArchivoTarjetas(300);
+	}
+}

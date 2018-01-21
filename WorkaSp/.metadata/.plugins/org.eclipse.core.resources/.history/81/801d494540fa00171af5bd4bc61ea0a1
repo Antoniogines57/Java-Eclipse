@@ -1,0 +1,12 @@
+package cortana;
+import cortana.programms.*;
+import java.util.ArrayList;
+import utilidades.Teclado;
+public class GestionHotelAdminV extends GestionHotel{
+	private Programa[] prg=new Programa[230];
+	public static void main(String[]args) {
+		/*
+		ArrayList<String[]> programms=new ArrayList<String[]>();
+		*/
+	}
+}

@@ -1,0 +1,12 @@
+package febrero_2011;
+
+public class BlancoExtendido extends Blanco {
+	public Localizacion getNinePos() {
+		if(location[8].getT()!=0&&location[8].getY()!=0&&location[8].getX()!=0) {
+			return location[8];
+		}
+		else {
+			 return null;
+		}
+	}
+}

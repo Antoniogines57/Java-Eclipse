@@ -1,0 +1,22 @@
+package cortana;
+
+public class Habitacion {
+	private int ID;
+	private Cliente cliente; private int actualUID;
+	private Fecha entrada,salida;
+	private boolean swift, premium;
+	private int numeroCamas;
+	
+	public Habitacion(int ID) {
+		this.ID=ID;
+	}
+	public void reserva(int ID, String user, Fecha deEntrada, Fecha deSalida) {
+		if(user==null||entrada.fechaAnteriorA(salida)!=true) System.out.println("Se ha producido un error"
+				+ ",\n compruebe los argumentos de entrada.");
+		else {
+			actualUser=new String(user); this.ID=ID; entrada=deEntrada.newFecha(deEntrada);salida=deSalida.newFecha(deSalida);
+		}
+	}
+	
+	
+}

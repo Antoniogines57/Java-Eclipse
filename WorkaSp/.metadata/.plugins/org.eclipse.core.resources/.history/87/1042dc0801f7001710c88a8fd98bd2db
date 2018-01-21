@@ -1,0 +1,8 @@
+package parcial_diciembre_2017;
+
+public class ArchivoTarjetas {
+	TarjetaDeEmpresa[] empleados;
+	public ArchivoTarjetas(int size){
+		
+	}
+}

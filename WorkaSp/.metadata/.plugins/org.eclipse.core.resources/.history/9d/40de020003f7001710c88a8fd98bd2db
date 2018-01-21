@@ -1,0 +1,47 @@
+package septiembre_2017;
+
+public class main {
+	public static int [] eliminaRepetidos(int [] a){
+		if (a==null || a.length==0) return null;
+		int [] b = new int [a.length];
+		for ( int i = 0; i<b.length; i++){
+			b[i]=a[i];
+		}
+		int intercambio;
+		for (int p = 0; p < b.length; p++ ){
+			for (int i = 0 ; i < b.length- 1; i++){
+				if (b[i] > b[i+1]){
+					intercambio = b[i];
+					b[i] = b[i+1];
+					b[i+1] = intercambio;
+				}
+			}
+		}
+		int contador=0;
+		for (int i=0; i<b.length-1; i++){
+			for(int kal=0;kal<b.length-1;kal++) {
+				if (b[i]==b[i+1]) contador++;
+			}
+		}
+		int j=0;
+		int [] res = new int [b.length-contador-1];
+		for (int m=0;m<b.length;m++) {
+			for (int i=0; i<b.length-1; i++){
+				if (b[i]!=b[i+1]) {
+					res[j]=b[i];
+					j++;
+				}
+			}
+		}
+		return res;
+		}
+	
+	
+	public static void main(String[]args) {
+		int[]a= {25,25,36,89,78,58,39,39,30,30,25};
+		int[]b=eliminaRepetidos(a);
+		for(int el:b) {
+			System.out.print(el+" ");
+		}
+	}
+}

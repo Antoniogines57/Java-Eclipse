@@ -1,0 +1,7 @@
+package cortana;
+import utilidades.Teclado;
+public class GestionHotelAdminV extends GestionHotel{
+	public static void main(String[]args) {
+		System.out.println("");
+	}
+}

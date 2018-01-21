@@ -1,0 +1,17 @@
+package septiembre_2012;
+
+public class Profesor implements Funcionario {
+
+	@Override
+	public int getNivel() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getCategoria() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

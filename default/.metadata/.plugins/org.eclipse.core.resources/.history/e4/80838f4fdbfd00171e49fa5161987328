@@ -1,0 +1,67 @@
+package p5;
+import java.text.DecimalFormat;
+public class Vector {
+	private Punto P0; private Punto P1;
+	
+	public Vector Vector() {P0=new Punto(0,0); P1=new Punto(1,0);
+	return new Vector(P0,P1);}
+	public Vector(Punto punt0, Punto punt1){
+		P0=punt0; P1=punt1;
+	}
+	public Vector(Punto punt0, double modulo, double grados) {
+		double gradRad=Math.toRadians(grados);
+		double subCord0=modulo*Math.sin(gradRad);	
+		double subCord1=modulo*Math.cos(gradRad);
+		P1=new Punto(subCord0+punt0.getX(), subCord1+punt0.getY());
+	}
+	public double getOrientation() {
+		double yFinal=P1.getY()-P0.getY();
+		double xFinal=P1.getX()-P0.getX();
+		double modulo=Math.sqrt(xFinal*xFinal+yFinal*yFinal);
+		return Math.asin(yFinal/modulo);
+	}
+	public Punto getFirstPoint() {
+		return P0;
+	}
+	public Punto getFinalPoint() {
+		return P1;
+	}
+	public double getModule() {
+		return Math.sqrt(Math.pow(P1.getX()-P0.getX(),2)+Math.pow(P1.getY()-P0.getY(),2));
+	}
+	public double getXAxis() {
+		return P1.getX()-P0.getX();
+	}
+	public double getYAxis() {
+		return P1.getY()-P0.getY();
+	}
+	public Vector girarAux(double gradosCent, Punto pAux) {
+		Punto origen=P0.trasladar(-pAux.getX(),-pAux.getY());
+		Punto fina= P1.trasladar(-pAux.getX(),-pAux.getY());
+		Punto finalOrigen=origen.girar(gradosCent);
+		Punto finalExtremo=fina.girar(gradosCent);
+		return new Vector (finalOrigen.trasladar(pAux.getX(),pAux.getY()),finalExtremo.trasladar(pAux.getX(), pAux.getY()));
+	}
+	public Vector girar(double gradCen, Punto auxx) {
+		
+	}
+	
+	
+	public Vector girar(double gradosCent) {
+		Punto fina= P1.trasladar(-P0.getX(),-P0.getY());
+		Punto finalExtremo=fina.girar(gradosCent);
+		return new Vector (P0,finalExtremo.trasladar(P0.getX(), P0.getY()));
+	}
+	public Vector tranladar(double canXP0,double canYP0, double canXP1, double canYP1) {
+		return new Vector(P0.trasladar(canXP0,canYP0), P1.trasladar(canXP1, canYP1));
+	}
+	public String toString(){
+		DecimalFormat forma=new DecimalFormat();
+		forma.setMaximumFractionDigits(2);
+		return "[ " + P0.toString() + " , "+ forma.format(getModule())+" , "+forma.format(getOrientation())+" ]";
+	}
+	/*
+	 * double X0=X*Math.cos(gradosR)+Y*Math.sin(gradosR);forma.format(getOrientation())
+	 * double Y0=X*Math.sin(gradosR)+Y*Math.cos(gradosR);	
+	 */
+}

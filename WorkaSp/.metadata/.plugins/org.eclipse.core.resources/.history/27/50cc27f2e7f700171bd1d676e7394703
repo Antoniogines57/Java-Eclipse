@@ -1,0 +1,15 @@
+package septiembre_2012;
+
+public class Main {
+	pubic static void main(String[]args) {
+		Funcionario[] murcia=new Funcionario[100];
+		for(Funcionario fu:murcia) {
+			if(Math.random()<0.5) {
+				fu=new Profesor();
+			}
+			else {
+				fu=new Administrativi();
+			}
+		}
+	}
+}

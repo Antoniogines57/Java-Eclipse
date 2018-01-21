@@ -1,0 +1,9 @@
+package septiembre_2012;
+
+public class Complejos {
+	double row, tita;
+	
+	public Complejo(double raw, double teta) {
+		row=raw, tita=teta;
+	}
+}

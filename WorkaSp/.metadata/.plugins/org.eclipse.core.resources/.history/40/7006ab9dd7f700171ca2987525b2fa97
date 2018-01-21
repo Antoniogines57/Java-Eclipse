@@ -1,0 +1,17 @@
+package junio_2013;
+
+public class Libro {
+	private float precio;
+	private CodigoBarras barCode;
+	private String autor;
+	private String titulo;
+	private int[] ISBN=new int[10]
+	
+	public Libro(float precio, CodigoBarras codigo, String autor, String titulo) {
+		this.precio=precio; barCode=codigo; this.autor=autor;
+		this.titulo=titulo;
+	}
+	
+	
+	
+}

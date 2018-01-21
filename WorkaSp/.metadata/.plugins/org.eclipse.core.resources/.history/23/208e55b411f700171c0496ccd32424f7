@@ -1,0 +1,6 @@
+package septiembre_2016;
+
+public class GestionHotel {
+	Habitacion[] hotel1=new Habitacion[1000];
+	
+}

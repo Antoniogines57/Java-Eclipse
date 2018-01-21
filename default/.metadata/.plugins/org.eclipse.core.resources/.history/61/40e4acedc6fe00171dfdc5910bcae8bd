@@ -1,0 +1,10 @@
+package seccion28_class91;
+import utilidades.Teclado;
+public class ControlVentas extends Ventas{
+	public static void main(String []args) {
+		System.out.println("Que operacion desea realizar: ");
+		System.out.println("1. Añadir producto: ");
+		System.out.println("1. Quitar producto producto: ");
+		
+	}
+}

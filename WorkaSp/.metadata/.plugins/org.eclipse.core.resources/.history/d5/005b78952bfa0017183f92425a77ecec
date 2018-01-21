@@ -1,0 +1,9 @@
+package cortana;
+
+public class Hotel {
+	private Habitacion[] habitaciones;
+	private String nombre;
+	private String owner;
+	private Trabajador[] trabajadores;
+	private String direccion;
+}

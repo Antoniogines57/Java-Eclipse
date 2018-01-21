@@ -1,0 +1,9 @@
+package cortana.programms;
+
+public interface Programa {
+	public void setDefinitio();
+	public String getDefinitio();
+	public void run();
+	public String toString();
+	public String getClass();
+}

@@ -1,0 +1,14 @@
+package parcial_diciembre_2017;
+
+public class TarjetaDeEmpresa implements ITarjetaVisita extends TarjetaPersonal{
+	
+	@Override
+	public String getNombre() {
+		return name;
+	}
+	@Override
+	public String getEMail() {
+		return null;
+	}
+
+}

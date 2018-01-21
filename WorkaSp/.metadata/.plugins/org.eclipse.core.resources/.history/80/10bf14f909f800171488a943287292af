@@ -1,0 +1,16 @@
+package cortana;
+
+public class Cliente {
+	private String ID;
+	private String nombre;
+	private String apellidos;
+	private int DNI;
+	private String password;
+	private Fecha deNacimiento
+	
+	public Cliente() {
+		System.out.println("Introduzca solamente su nombre: ");
+		System.out.println("Introduzca sus apellidos: ");
+		System.out.println("Introduzca su DNI: ");
+	}
+}

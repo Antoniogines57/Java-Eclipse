@@ -1,0 +1,13 @@
+package junio_2013;
+
+public class Smarphone implements IArticulo {
+	public double getPrecio() {
+		return 0;
+	}
+	public void setPrecio(float p) {		
+	}
+	public CodigoBarras getCodigoBarras() {
+		return null;
+	}
+	
+}

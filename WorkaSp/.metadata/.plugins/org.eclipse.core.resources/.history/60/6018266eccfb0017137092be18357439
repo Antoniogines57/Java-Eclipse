@@ -1,0 +1,61 @@
+package colegio;
+import java.util.ArrayList;
+public class Alumnos{
+    
+    private int edad;
+    private ArrayList<Integer> notas;
+    private Asignatura[] asignaturas;
+    private String nombre;
+    private String apellido1;
+    private String apellido2;
+    private int alumnID;
+    private Grupo grupo;
+    
+    public void setName(String name){
+        nombre=name;
+    }
+    public void setFirstSurname (String surname1){
+        apellido1=new String(surname1);
+    }
+    public void setSecondSurname (String surname2){
+        apellido2=new String(surname2);
+    }
+    public void setAge(int age){
+        edad=age;
+    }
+    public void setMarks(nota[] marks) {
+        nota=marks;
+    }
+    public void setAlumnID(int ID){
+        alumnID=ID;
+    }
+    public void setGroup(int groupNumber) {
+    	groupID=groupNumber;
+    }
+    public String getName(){
+        return nombre;
+    }
+    public String getFirstSurname() {
+        return apellido1;
+    }
+    public String getSecondSurname() {
+        return apellido2;
+    }
+    public int getAge(){
+        return edad;
+    }
+    public double getMarks(){
+    	double nota=0;
+    	for(int l:notas) {
+    		nota+=l;
+    	}
+        return nota/notas.length;
+    }
+    public int getAlumnID(){
+        return alumnID;
+    }
+    public Grupo getGroupdID() {
+    	return grupo;
+    }
+}
+

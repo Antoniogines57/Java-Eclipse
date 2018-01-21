@@ -1,0 +1,11 @@
+package cortana;
+
+public class Fecha {
+	private double minutos;
+	private double hora;
+	private int dia;
+	private int mes;
+	private int year;
+	
+	public Fecha(int dia, int mes, int anyo) {this.dia=dia; this.mes=mes; this.year=anyo;}
+}
