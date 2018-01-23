@@ -6,8 +6,11 @@ public class Punto implements IForma {
 	private double X;
 	private double Y;
 	
-	Punto(){X=0; Y=0;}
-	Punto(double xx, double yy){X=xx;Y=yy;}
+	public Punto(){X=0; Y=0;}
+	public Punto(double xx, double yy){X=xx;Y=yy;}
+	public Punto(Punto p) {
+		X=p.getX();Y=p.getY();
+	}
 	
 	public void setPunto(double ejeX,double ejeY) {
 		X=ejeX;

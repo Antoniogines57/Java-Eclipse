@@ -1,5 +1,5 @@
 package practicasReales;
-class AñadirProductos {
+class AddProductos {
 
 	private static void main(String[] args) {
 		// TODO Auto-generated method stub
