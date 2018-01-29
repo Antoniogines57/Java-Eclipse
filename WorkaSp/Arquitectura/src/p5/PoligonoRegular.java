@@ -2,22 +2,22 @@ package p5;
 
 public class PoligonoRegular {
 	private Vector vectorDireccion;
-	private Vector[] vertices;
+	private Punto[] vertices;
 	
 	public PoligonoRegular(int num_lados, double lado) {
-		double sigma= (Math.PI)/num_lados;
-		vertices=new Vector[num_lados];
+		double sigma= Math.PI/num_lados;
 		double radio=lado/2*Math.sin(sigma);
+		vertices=new Punto[num_lados];
+		vertices[0]=new Punto(0,radio);
 		
-		vertices[0]=new Vector(new Punto(0,0),new Punto(0,-radio).girar((2*Math.PI)-sigma));
 		
 		for(int i=1;i<vertices.length;i++) {
-			vertices[i]=(Vector)vertices[i-1].girar(2*sigma);
+			vertices[i]=vertices[i-1].girar(2*sigma,0,0);
 		}
 		vectorDireccion=new Vector(new Punto(0,0), new Punto(0,1));
 		
 	}
-	public PoligonoRegular(Vector direccion, Vector[] veert) {
+	public PoligonoRegular(Vector direccion, Punto[] veert) {
 		this.vectorDireccion=direccion; this.vertices=veert;
 	}
 	public Punto getCentre() {
@@ -27,20 +27,16 @@ public class PoligonoRegular {
 		return vectorDireccion;
 	}
 	public double getLado() {
-		return 2*vertices[0].getModule()*Math.sin(Math.PI/vertices.length);
+		return 2*vertices[0].distancia(vertices[1])*Math.sin(Math.PI/vertices.length);
 	}
 	public double getPerimetro() {
-		return  vertices.length*2*vertices[0].getModule()*Math.sin(Math.PI/vertices.length);
+		return  vertices.length*2*vertices[0].distancia(vertices[1])*Math.sin(Math.PI/vertices.length);
 	}
 	public double getArea() {
-		return vertices[0].getModule()*Math.cos(Math.PI/vertices.length);
+		return vertices[0].distancia(vertices[1])*Math.cos(Math.PI/vertices.length);
 	}
 	public Punto[] getVortex() {
-		Punto[] vortex=new Punto[vertices.length];
-		for(int i=0;i<vortex.length;i++){
-			vortex[i]=((Vector)vertices[i]).getFinalPoint();
-		}
-		return vortex;
+		return vertices;
 	}
 	public PoligonoRegular girar(double grados, double dx, double dy) {
 		vectorDireccion.girar(grados,dx,dy);
@@ -64,9 +60,14 @@ public class PoligonoRegular {
 		return new PoligonoRegular(vectorDireccion,vertices);
 	}
 	public String toString() {
-		String concatt="Centro en "+vectorDireccion.getFinalPoint();
-		for(int i=0;i<vertices.length-1;i++) {
-			concatt+="\nLado 1: "+((Vector)vertices[i]).getFinalPoint().distancia((((Vector)vertices[i+1]).getFinalPoint()));
+		String concatt="Centro en "+getCentre()+"\n";
+		for(int i=0;i<vertices.length;i++) {
+			if(i<vertices.length-1) {
+				concatt+="\nLado "+(i+1)+": "+vertices[i].distancia((vertices[i+1]));
+			}
+			else {
+				concatt+="\nLado "+(i+1)+": "+vertices[i].distancia((vertices[0]));
+			}
 		}
 		return concatt;
 	}
